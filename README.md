@@ -1,12 +1,10 @@
-# COCO loss for person recognition
+# COCO Loss
 
 Codebase for Learning Deep Features via Congenerous Cosine Loss for Person Recognition, [[arXiv]](https://arxiv.org/abs/1702.06890)
 
-In this paper, we use the newly proposed [PIPA](https://people.eecs.berkeley.edu/~nzhang/piper.html) dataset for evaluation; it is a large-scale dataset for person recognition. This repo contains the network model files in the `prototxt` folder on MNIST dataset. 
+In this paper, we use the newly proposed [PIPA](https://people.eecs.berkeley.edu/~nzhang/piper.html) dataset for evaluation; it is a large-scale dataset for person recognition. 
 
-The proposed COCO loss layer (known as `center_projection_layer.cu` [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/center_projection_layer.cu)) and the normalized layer ([here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cu)) are also provided. The gradient derivation in the initial release (v1) on arXiv is **wrong**; please resort to v2 (latest version): Eqn.(8) in v2 paper corresponds to the implementation around lines [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cpp#L55).
-
-We provide the sample code for generate Figure 3 in our paper. Please follow the steps below:
+We provide the sample code for generate distributions of COCO Loss, Softmax Loss and Center Loss as Figure 3 in our paper. Please follow the steps below:
 
 ## Run this sample code
 
@@ -20,8 +18,10 @@ We provide the sample code for generate Figure 3 in our paper. Please follow the
 
 ![](output_sample.jpg)
 
-Notice that the distributions are generated based on caffemodels in `model/[LOSS_NAME]`. You can reproduce the result by using network define files in `model\train_prototxts`.
+Notice that the distributions are generated based on caffemodels in `model/[LOSS_NAME]`. You can reproduce the result by using network defination files in `model/train_prototxts/`.
 
+
+The proposed COCO loss layer (known as `center_projection_layer.cu` [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/center_projection_layer.cu)) and the normalized layer ([here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cu)) are also provided. The gradient derivation in the initial release (v1) on arXiv is **wrong**; please resort to v2 (latest version): Eqn.(8) in v2 paper corresponds to the implementation around lines [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cpp#L55).
 
 ## Q&A
 
