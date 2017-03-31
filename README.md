@@ -26,9 +26,9 @@ Feel free to drop us an email sharing your ideas.
 
 Please refer to the paper for details.
 
-- Cosine Normalization: Using Cosine Similarity Instead of Dot Product in Neural Networks, [[link](https://arxiv.org/abs/1702.05870), *arXiv, 2017*.
+- Cosine Normalization: Using Cosine Similarity Instead of Dot Product in Neural Networks, [[link]](https://arxiv.org/abs/1702.05870), *arXiv, 2017*.
 
-- Large-Margin Softmax Loss for Convolutional Neural Networks, [[link](http://jmlr.org/proceedings/papers/v48/liud16.pdf), *ICML, 2016*.
+- Large-Margin Softmax Loss for Convolutional Neural Networks, [[link]](http://jmlr.org/proceedings/papers/v48/liud16.pdf), *ICML, 2016*.
 
 ## Citation
 Please kindly cite our work in your publications if it helps your research:
