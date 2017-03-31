@@ -6,6 +6,23 @@ In this paper, we use the newly proposed [PIPA](https://people.eecs.berkeley.edu
 
 The proposed COCO loss layer (known as `center_projection_layer.cu` [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/center_projection_layer.cu)) and the normalized layer ([here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cu)) are also provided. The gradient derivation in the initial release (v1) on arXiv is **wrong**; please resort to v2 (latest version): Eqn.(8) in v2 paper corresponds to the implementation around lines [here](https://github.com/sciencefans/CaffeMex_v2/blob/master/src/caffe/layers/normalize_layer.cpp#L55).
 
+We provide the sample code for generate Figure 3 in our paper. Please follow the steps below:
+
+## Run this sample code
+
+1. Compile CaffeMex_v2 with matlab interface (https://github.com/sciencefans/CaffeMex_v2/)
+
+2. Link(Linux) or copy(Windows) CaffeMex_v2/matlab/+caffe to the root dir. of this project
+
+3. Run script_show_minist.m
+
+4. It will take just few seconds to generate three figures as:
+
+![](output_sample.jpg)
+
+Notice that the distributions are generated based on caffemodels in `model/[LOSS_NAME]`. You can reproduce the result by using network define files in `model\train_prototxts`.
+
+
 ## Q&A
 
 Here we list some commonly asked questions we received from the public. Thanks for your engagement to make our work matter!
