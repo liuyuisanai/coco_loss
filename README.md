@@ -1,6 +1,11 @@
 # COCO Loss
 
-Codebase for Learning Deep Features via Congenerous Cosine Loss for Person Recognition, [[arXiv]](https://arxiv.org/abs/1702.06890). In the paper, we use the newly proposed [PIPA](https://people.eecs.berkeley.edu/~nzhang/piper.html) dataset for evaluation; it is a large-scale dataset for person recognition. 
+*Update:* we have an updated version of this work, which we call **COCO_v2** and is accepted to NIPS 2017. The difference from v1 to v2 is that, in a short story, we (a) propose an optimal scale factor imposed on the input feature before COCO loss; (b) experiments are extended to large-scale face recognition datasets beyond PIPA.
+
+The codebase is **UPGRADED to COCO_v2.** :)
+
+
+Codebase for Learning Deep Features via Congenerous Cosine Loss for Person Recognition (COCO_v1), [[arXiv]](https://arxiv.org/abs/1702.06890). In the paper, we use the newly proposed [PIPA](https://people.eecs.berkeley.edu/~nzhang/piper.html) dataset for evaluation; it is a large-scale dataset for person recognition. 
 
 We provide a sample code for generating distributions of COCO Loss, Softmax Loss and Center Loss as Figure 3 in our paper. Please follow the steps below:
 
