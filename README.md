@@ -1,6 +1,6 @@
 # COCO Loss
 
-*Update:* we have an updated version of this work, which we call **COCO_v2** and is accepted to NIPS 2017. The difference from v1 to v2 is that, in a short story, we (a) propose an optimal scale factor imposed on the input feature before COCO loss; (b) experiments are extended to large-scale face recognition datasets beyond PIPA.
+*Update:* we have an updated version of this work, which we call **COCO_v2** [[arXiv]](https://arxiv.org/pdf/1710.00870.pdf) and is accepted to NIPS 2017. The **difference from v1 to v2** is that, in a short story, we (a) propose an optimal scale factor imposed on the input feature before COCO loss; (b) experiments are extended to large-scale face recognition datasets beyond PIPA.
 
 The codebase is **UPGRADED to COCO_v2.** :)
 
@@ -58,7 +58,14 @@ Please refer to the paper for details.
 ## Citation
 Please kindly cite our work in your publications if it helps your research:
 
-    @article{liu_2017_coco,
+    @proceedings{liu_2017_coco_v2,
+      Author = {Liu, Yu and Li, Hongyang and Wang, Xiaogang},
+      Title = {Rethinking Feature Discrimination and Polymerization for Large-scale Recognition},
+          Conference = {NIPS},
+          Year = {2017}
+    }
+
+    @article{liu_2017_coco_v1,
       Author = {Liu, Yu and Li, Hongyang and Wang, Xiaogang},
       Title = {Learning Deep Features via Congenerous Cosine Loss for Person Recognition},
 	  Journal = {arXiv preprint: 1702.06890},
