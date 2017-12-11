@@ -1,0 +1,15 @@
+net: "net/ir235_ws_nobnsync_21475/train_val.prototxt"
+base_lr: 0.001
+lr_policy: "multistep"
+gamma: 0.316
+stepvalue: 156250
+stepvalue: 234375
+stepvalue: 312500
+stepvalue: 350000
+max_iter: 400000
+display: 0
+momentum: 0.9
+weight_decay: 0.0001
+snapshot: 0
+#debug_info: true
+
