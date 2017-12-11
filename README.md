@@ -1,6 +1,6 @@
 # COCO Loss
 
-*Update:* we have released the network structure for face recognition. And we answer some common questions in Q&A.
+**Update:** we have released the network structure for face recognition. And we answer some common questions in Q&A.
 
 *Update:* we have an updated version of this work, which we call **COCO_v2** [[arXiv]](https://arxiv.org/pdf/1710.00870.pdf). The **difference from v1 to v2** is that, in a short story, we (a) propose an optimal scale factor imposed on the input feature before COCO loss; (b) experiments are extended to large-scale face recognition datasets beyond PIPA.
 
@@ -40,15 +40,15 @@ Here we list some commonly asked questions we received from the public. Thanks f
 
 	Hah, good question. There are mainly two. First is we initialize the network with a pre-trained model for the re-id task in order for the loss to converge well in a large-scale dataset like PIPA; second is we do not normalize the feature to 1. There are some numerical problems for gradients of centroids if we  normalize all features and weights to 1. In MNIST, we initialize the scaler to 1 for weights and 2 for features while in PAPA we set 30 and 100, respectively.
 
-- **New** *How could COCO achieves 99.86% on LFW with 10 incorrect annotations?*
+- **[New]** *How could COCO achieves 99.86% on LFW with 10 incorrect annotations?*
 
 	Some people represent the issue of 'upper limit accuracy' of LFW such as [this issue](https://github.com/sciencefans/coco_loss/issues/9). We have to indicate that there are 10 incorrect pairs on LFW but only the **6 matching pairs** are 'really incorrect'. The faces in the other **4 mismatching pairs** are labeled with wrong identities but they are still *mismatching*. So the upper limit accuracy is *(6000-6)/6000=99.90%*. For more details please refer to [Errata of LFW](http://vis-www.cs.umass.edu/lfw/index.html).
 
-- **New** *Any comments on the evalutation of LFW and MegaFace?*
+- **[New]** *Any comments on the evalutation of LFW and MegaFace?*
 
 	We believe that both LFW and MegaFace are not precise benchmark for face recognition/verification. For LFW, most of the recent CNN based algorithms get the saturation area of this benchmark. For MegaFace, the top-1 accuracy introduces an inverse correlation with the accuracy of face detector. That is, the worse of your face detector, the less real faces you will detect in distractors, so there will be more meaningless background in distractors and the top-1 accuracy will be higher. In our work, we use the commercial version of [RSA](https://github.com/walkoncross/RSA-for-object-detection) to be our detector and we ensure that all the faces we detected are real faces. For the images we didn't detect a face, none of them includes faces larger than 10x10 (in fact, most of them are entire background). Above all, we appeal to the researchers in area of face recognition to pay more attention on ablation study but not the absolute value of accuracy.
 
-- **New** *Will the models for face recognition be released in future?*
+- **[New]** *Will the models for face recognition be released in future?*
 
 	The network structure is released but the trained model will not be released at least in recent days. Since the alignment algorithm and the cleaned MS1M are classified and copyright by Sensetime Group Limited.
 
